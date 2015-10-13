@@ -1,0 +1,38 @@
+{
+    "name": "michaldudek/knit-bundle",
+    "type": "symfony-bundle",
+    "description": "Knit integration with Symfony2.",
+    "keywords": ["orm", "odm", "datamapper", "database", "mysql", "mongo", "pgsql", "postgresql", "popo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michał Pałys-Dudek",
+            "email": "michal@michaldudek.pl"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "michaldudek/knit": "0.2.*@dev",
+        "symfony/symfony": ">=2.1,<3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8",
+        "squizlabs/php_codesniffer": "~2.3",
+        "phpmd/phpmd" : "~2.3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Knit\\Bundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Knit\\Bundle\\Tests\\": "tests/"
+        }
+    }
+}

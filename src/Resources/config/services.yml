@@ -1,0 +1,28 @@
+parameters:
+    knit.store.doctrine_dbal.class: Knit\Store\DoctrineDBAL\Store
+    knit.store.doctrine_dbal.criteria_parser.class: Knit\Store\DoctrineDBAL\CriteriaParser
+    knit.store.mongodb.class: Knit\Store\MongoDb\Store
+    knit.store.mongodb.criteria_parser.class: Knit\Store\MongoDb\CriteriaParser
+    knit.data_mapper.array_serializer.class: Knit\DataMapper\ArraySerializable\ArraySerializer
+
+services:
+
+    # abstract repository that simply allows to hide the factory part
+    knit.repository:
+        factory: ["@knit", "getRepository"]
+        abstract: true
+
+    # default data mapper service
+    knit.data_mapper.array_serializer:
+        class: %knit.data_mapper.array_serializer.class%
+        private: true
+
+    # criteria parser for doctrine_dbal store
+    knit.store.doctrine_dbal.criteria_parser:
+        class: %knit.store.doctrine_dbal.criteria_parser.class%
+        private: true
+
+    # criteria parser for mongodb store
+    knit.store.mongodb.criteria_parser:
+        class: %knit.store.mongodb.criteria_parser.class%
+        private: true
