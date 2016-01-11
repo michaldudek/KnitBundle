@@ -4,7 +4,7 @@ Knit Bundle
 Knit ties your PHP objects with your database of choice in a simple way. Read more about 
 Knit in its [repository](https://github.com/michaldudek/Knit).
 
-This is a Symfony2 Bundle that integrates Knit with the framework.
+This is a Symfony3 Bundle that integrates Knit with the framework.
 
 [![Build Status](https://travis-ci.org/michaldudek/KnitBundle.svg?branch=master)](https://travis-ci.org/michaldudek/KnitBundle)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/df8b71e5-8147-4b39-a4e7-aa8c4358f15e/mini.png)](https://insight.sensiolabs.com/projects/df8b71e5-8147-4b39-a4e7-aa8c4358f15e)
